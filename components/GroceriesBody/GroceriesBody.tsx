@@ -129,9 +129,9 @@ const GroceriesBody = () => {
 
       const lines = cleanText
         .split("\n")
-        .map((l) => l.trim())
+        .map((l: any) => l.trim())
         .filter(
-          (l) =>
+          (l: any) =>
             l &&
             !l.match(
               /(SUBTOTAL|TOTAL|REFERENCIA|CANT|FACTURA|CAJERO|FECHA|CAMBIO|TARJETA|EFECTIVO|IMPUESTO|DESCRIPCION)/i

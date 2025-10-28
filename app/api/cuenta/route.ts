@@ -44,7 +44,7 @@ export async function POST(req: Request) {
     cuenta.saldo = data.saldo;
 
     // Ver si ya hay registro para hoy
-    const idx = cuenta.historial.findIndex((h) => h.fecha === hoy);
+    const idx = cuenta.historial.findIndex((h: any) => h.fecha === hoy);
     if (idx >= 0) cuenta.historial[idx].saldo = data.saldo;
     else cuenta.historial.push({ fecha: hoy, saldo: data.saldo });
 
