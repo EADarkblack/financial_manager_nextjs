@@ -1,12 +1,8 @@
 import mongoose from "mongoose";
+import { MONGODB_URI } from "@/constants/constants";
 
-const MONGODB_URI =
-  process.env.MONGODB_URI ||
-  "mongodb+srv://wilmarmiguez:Lob5htxKfEo59WV4@db-formulario.q9lt6h6.mongodb.net/";
-
-if (!MONGODB_URI) {
-  throw new Error("⚠️ Debes definir la variable de entorno MONGODB_URI");
-}
+if (!MONGODB_URI)
+  throw new Error("La url de la base de datos no fue encontrada.");
 
 let isConnected = false;
 
@@ -15,11 +11,12 @@ export const connectDB = async () => {
 
   try {
     await mongoose.connect(MONGODB_URI, {
-      dbName: "financial_manager", // 👈 nombre de tu base en Atlas
+      dbName: "financial_manager",
     });
+
     isConnected = true;
-    console.log("✅ Conectado a MongoDB Atlas");
-  } catch (error) {
-    console.error("❌ Error al conectar a MongoDB:", error);
+    console.log("Conectado a la base de datos.");
+  } catch (err) {
+    console.error(err);
   }
 };

@@ -1,3 +1,4 @@
+//Components
 import HomeBody from "@/components/HomeBody/HomeBody";
 
 //TODO: Refactorizar codigo
@@ -7,7 +8,7 @@ import HomeBody from "@/components/HomeBody/HomeBody";
 //TODO: Crear un modulo de presupuestos para el calculo de los presupuestos
 //TODO: Crear un modulo de estimacion de gastos por quincena
 //TODO: Crear un modulo de Deudas y Deudores
-//FIXME: Corregir fallo al capturar valor del msm, toma la , como si fuera tambien decimales
+//TODO: Crear pantalla de carga
 
 const page = () => {
   return (

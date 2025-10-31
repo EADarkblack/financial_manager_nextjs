@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
-import Factura from "@/models/Factura";
-import Producto from "@/models/ProductosOCR";
+import Factura from "@/models/InvoiceSchema/Invoice";
+import Producto from "@/models/ProductSchema/Product";
 
 export async function GET() {
   try {
