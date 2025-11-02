@@ -1,7 +1,7 @@
 import mongoose, { Model } from "mongoose";
 
 //Types
-import { TransactionHistorySchema } from "./TransactionHistory.types";
+import type { TransactionHistorySchema } from "./TransactionHistory.types";
 
 const TransactionHistorySchema = new mongoose.Schema<TransactionHistorySchema>({
   date: { type: String, required: true },

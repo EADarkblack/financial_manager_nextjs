@@ -1,7 +1,7 @@
 import mongoose, { Model, Schema } from "mongoose";
 
 //Types
-import { ProductSchema } from "./Product.types";
+import type { ProductSchema } from "./Product.types";
 
 const ProductSchema = new Schema<ProductSchema>({
   reference_code: { type: String, required: true, unique: true },

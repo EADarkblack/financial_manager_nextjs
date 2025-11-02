@@ -1,7 +1,7 @@
 import mongoose, { Model, Schema } from "mongoose";
 
 //Types
-import { InvoiceSchema, ProductSchema } from "./Invoice.types";
+import type { InvoiceSchema, ProductSchema } from "./Invoice.types";
 
 const ProductSchema = new Schema<ProductSchema>({
   reference_code: String,
