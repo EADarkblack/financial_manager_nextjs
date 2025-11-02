@@ -1,4 +1,4 @@
-import mongoose, { Schema, models } from "mongoose";
+import mongoose, { Model, Schema } from "mongoose";
 
 //Types
 import { InvoiceSchema, ProductSchema } from "./Invoice.types";
@@ -15,5 +15,6 @@ const InvoiceSchema = new Schema<InvoiceSchema>({
   product: { type: [ProductSchema], default: [] },
 });
 
-export const Invoice =
-  models.Invoice || mongoose.model("Invoice", InvoiceSchema);
+export const Invoice: Model<InvoiceSchema> =
+  mongoose.models.Invoice ||
+  mongoose.model<InvoiceSchema>("Invoice", InvoiceSchema);

@@ -1,4 +1,4 @@
-import mongoose, { Schema, models } from "mongoose";
+import mongoose, { Model, Schema } from "mongoose";
 
 //Types
 import { ProductSchema } from "./Product.types";
@@ -11,5 +11,6 @@ const ProductSchema = new Schema<ProductSchema>({
   updated_at: { type: String, default: null },
 });
 
-export const Product =
-  models.Product || mongoose.model("Product", ProductSchema);
+export const Product: Model<ProductSchema> =
+  mongoose.models.Product ||
+  mongoose.model<ProductSchema>("Product", ProductSchema);

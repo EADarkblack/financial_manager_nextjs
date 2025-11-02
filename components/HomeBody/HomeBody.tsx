@@ -234,7 +234,7 @@ const HomeBody = () => {
       <SideBarComponent />
 
       <div className="flex flex w-full h-[100vh] justify-center">
-        <main className="flex flex-col w-[1004px] justify-center">
+        <main className="flex flex-col w-[1004px] justify-start mt-6">
           <h2 className="text-3xl font-semibold mb-4 text-[#3B82F6]">
             Historial de gastos
           </h2>

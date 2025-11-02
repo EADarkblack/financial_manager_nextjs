@@ -1,11 +1,13 @@
 "use client";
-import React, { useState } from "react";
+
+import { useState } from "react";
 import { FaBars } from "react-icons/fa6";
-import { usePathname } from "next/navigation"; // 👈 Importa esto
+import { usePathname } from "next/navigation";
 
 const SideBarComponent = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const pathname = usePathname(); // 👈 Obtiene la ruta actual de forma segura
+
+  const pathname = usePathname();
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
@@ -47,15 +49,27 @@ const SideBarComponent = () => {
           </a>
 
           <a
-            href="/groceries"
+            href="/invoices"
             onClick={closeSidebarOnMobile}
             className={`flex items-center gap-2 p-2 rounded transition ${
-              pathname === "/groceries"
+              pathname === "/invoices"
                 ? "bg-[#1F2937] text-[#3B82F6]"
                 : "hover:bg-[#1F2937] hover:text-[#3B82F6]"
             }`}
           >
-            <span>Mercado</span>
+            <span>Facturas</span>
+          </a>
+
+          <a
+            href="/products"
+            onClick={closeSidebarOnMobile}
+            className={`flex items-center gap-2 p-2 rounded transition ${
+              pathname === "/products"
+                ? "bg-[#1F2937] text-[#3B82F6]"
+                : "hover:bg-[#1F2937] hover:text-[#3B82F6]"
+            }`}
+          >
+            <span>Productos</span>
           </a>
         </nav>
       </aside>

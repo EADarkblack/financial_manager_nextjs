@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 //Types
 import { TransactionHistory } from "../HomeBody/HomeBody.types";
 import { TransactionHistoryTableComponentProps } from "./TransactionHistoryTableComponent.types";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const TransactionHistoryTableComponent: React.FC<
   TransactionHistoryTableComponentProps
