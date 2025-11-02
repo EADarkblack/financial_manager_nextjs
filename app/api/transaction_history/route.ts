@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 //Models
 import { TransactionHistory } from "@/models/TransactionHistorySchema/TransactionHistory";
 
-export async function GET(req: Request, res: NextResponse) {
+export async function GET() {
   try {
     await connectDB();
 
